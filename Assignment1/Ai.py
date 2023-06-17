@@ -2,6 +2,7 @@ from heapq import heapify, heappop, heappush
 import math
 import csv
 from collections import defaultdict
+import time
 
 COORDINATES_FILE = "Assignment1\Coordinates.csv"
 DISTANCE_FILE = "Assignment1\distances.csv"
@@ -61,6 +62,7 @@ visited = set()
 parent_map = {}
 
 while priority_queue:
+    start=time.time()
     key, current_star, parent, path_distance_from_src = heappop(priority_queue)
 
     if current_star in visited:
@@ -69,7 +71,7 @@ while priority_queue:
     parent_map[current_star] = parent
 
     if current_star == DESTINATION_STAR:
-        print("The distance is " + str(path_distance_from_src))
+        print("The distance is " + str(path_distance_from_src)+ ";]\ time : " + str(time.time()- start))
         break
     visited.add(current_star)
 
