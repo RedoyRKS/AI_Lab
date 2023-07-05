@@ -117,7 +117,7 @@ for entry in validation:
 true_output = [entry[-1] for entry in validation]
 
 accuracy = get_accuracy(true_output, predicted_output)
-print(f"Validation accuracy: {accuracy:.2f}%")
+print(f"Validation accuracy : {accuracy:.2f}%")
 
 test = mark_records[math.floor(len(mark_records) * 0.9):]
 
