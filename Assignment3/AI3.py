@@ -90,7 +90,7 @@ def get_accuracy(true_output, predicted_output):
 predicted_output = []
 
 # No of neighbours
-k = 3
+k = int(input("Enter the value of k :"))
 
 for entry in validation:
     dist_vector = []
